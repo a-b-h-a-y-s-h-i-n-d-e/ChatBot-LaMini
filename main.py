@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import FileResponse
+import os
 
 
 app = FastAPI()
@@ -31,4 +32,4 @@ app.add_middleware(
 
 @app.get('/')
 async def home():
-    return FileResponse("frontend/build/index.html")
+    return FileResponse(os.path.join("frontend", "build", "index.html"))
