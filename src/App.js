@@ -33,7 +33,7 @@ function App() {
       const data = await response.json()
       console.log(data)
 
-      setApiResponse(data[0])
+      setApiResponse(data[1]) // don't know why but index change everytime
     }catch(error){
       alert(error)
     }
