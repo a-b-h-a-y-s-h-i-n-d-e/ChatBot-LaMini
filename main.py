@@ -11,6 +11,13 @@ app.mount("/static", StaticFiles(directory="frontend/build/static"), name="stati
 
 origins = [
     "http://localhost:3000",
+    "http://localhost.tiangolo.com",
+    "https://localhost.tiangolo.com",
+    "http://localhost",
+    "http://localhost:8080",
+    "http://localhost:8000",
+    "http://localhost:80",
+    "http://localhost:443",
 ]
 
 app.add_middleware(
