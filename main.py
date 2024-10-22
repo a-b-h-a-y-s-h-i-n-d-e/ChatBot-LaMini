@@ -33,7 +33,7 @@ app.add_middleware(
 
 @app.get('/')
 async def home():
-    return FileResponse(os.path.join("frontend", "build", "index.html"))
+    return FileResponse("frontend/build/index.html")
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
