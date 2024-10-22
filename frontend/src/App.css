@@ -1,0 +1,57 @@
+.app-container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;           
+}
+
+.input-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.input {
+  background-color: #212121;
+  height: 30px;
+  width: 300px;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.input:focus {
+  color: rgb(0, 255, 255);
+  background-color: #212121;
+  outline-color: rgb(0, 255, 255);
+  box-shadow: -3px -3px 15px rgb(0, 255, 255);
+  transition: 0.1s;
+  transition-property: box-shadow;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.response-container {
+  margin-top: 20px;
+}
+
+.response-box {
+  width: 500px; 
+  height: 300px; 
+  background-color: #212121; 
+  color: white; 
+  border: 2px solid white;
+  border-radius: 5px; 
+  padding: 10px; 
+  resize: none; 
+}
