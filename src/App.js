@@ -15,7 +15,7 @@ function App() {
   const handleSubmit = async (event) => {
     event.preventDefault()
     
-    const apiURL = 'https://lamini-flan-t5-api.onrender.com/generate/'
+    const apiURL = 'http://13.51.64.135:8000/generate/'
 
     try{
       const response = await fetch(apiURL, {
