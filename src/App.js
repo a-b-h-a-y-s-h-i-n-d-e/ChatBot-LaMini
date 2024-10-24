@@ -27,6 +27,8 @@ function App() {
       })
 
       if(!response.ok){
+        const errorText = await response.text();
+        console.error(`Error: ${response.status} - ${errorText}`);
         throw new Error(`bruhh what is this -> ${response.status}`)
       }
 
@@ -34,7 +36,9 @@ function App() {
       console.log(data)
 
       setApiResponse(data[1]) // don't know why but index change everytime
+      
     }catch(error){
+      console.error("Caught an error:", error);
       alert(error)
     }
   }
