@@ -23,7 +23,8 @@ function App() {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ prompt: userInput })
+        body: JSON.stringify({ prompt: userInput }),
+        rejectUnauthorized: false
       })
 
       if (!response.ok) {
