@@ -15,7 +15,7 @@ function App() {
   const handleSubmit = async (event) => {
     event.preventDefault()
 
-    const apiURL = 'https://13.51.64.135:8000/generate/'
+    const apiURL = 'https://lamini.zapto.org/generate/'
 
     try {
       const response = await fetch(apiURL, {
