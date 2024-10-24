@@ -14,19 +14,19 @@ function App() {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    
+
     const apiURL = 'https://13.51.64.135:8000/generate/'
 
-    try{
+    try {
       const response = await fetch(apiURL, {
-        method:'POST',
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({prompt:userInput})
+        body: JSON.stringify({ prompt: userInput })
       })
 
-      if(!response.ok){
+      if (!response.ok) {
         const errorText = await response.text();
         console.error(`Error: ${response.status} - ${errorText}`);
         throw new Error(`bruhh what is this -> ${response.status}`)
@@ -34,10 +34,10 @@ function App() {
 
       const data = await response.json()
       console.log(data)
-
-      setApiResponse(data[1]) // don't know why but index change everytime
       
-    }catch(error){
+      setApiResponse(data.response) 
+
+    } catch (error) {
       console.error("Caught an error:", error);
       alert(error)
     }
@@ -59,11 +59,11 @@ function App() {
       </div>
 
       <div className="response-container">
-        <textarea 
-          className="response-box" 
-          value={apiResponse} 
-          readOnly 
-          placeholder="API Response will appear here..." 
+        <textarea
+          className="response-box"
+          value={apiResponse}
+          readOnly
+          placeholder="API Response will appear here..."
         />
       </div>
     </div>
