@@ -35,8 +35,8 @@ function App() {
 
       const data = await response.json()
       console.log(data)
-      
-      setApiResponse(data.response) 
+
+      setApiResponse(data.response)
 
     } catch (error) {
       console.error("Caught an error:", error);
@@ -55,7 +55,16 @@ function App() {
             onChange={handleInput}
             className="input"
           />
-          <button type="submit" className="submit-button">Generate</button>
+          <button alt="generate" type="submit">
+            <i>g</i>
+            <i>e</i>
+            <i>n</i>
+            <i>e</i>
+            <i>r</i>
+            <i>a</i>
+            <i>t</i>
+            <i>e</i>
+          </button>
         </form>
       </div>
 
