@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import { Analytics } from "@vercel/analytics/react"
 
 
 function App() {
@@ -45,6 +46,10 @@ function App() {
   }
 
   return (
+    <html>
+    <head></head>
+    <body>
+      <Analytics/>
     <div className="app-container">
       <div className="input-container">
         <form className="form-container" onSubmit={handleSubmit}>
@@ -77,7 +82,8 @@ function App() {
         />
       </div>
     </div>
-
+    </body>
+    </html>
   )
 
 }
